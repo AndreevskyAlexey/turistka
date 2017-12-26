@@ -70,7 +70,7 @@ dt {
     height: 200px;
     overflow: auto;
 
-
+    line-height: 25px;
     border: 1px solid #b3b3b3;
     background-color: white;
     color: #333;
