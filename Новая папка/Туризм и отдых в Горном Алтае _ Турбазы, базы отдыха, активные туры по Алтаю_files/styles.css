@@ -1,0 +1,135 @@
+html { height: 100%; }
+BODY { SCROLLBAR-BASE-COLOR: #E4E2E0;
+	margin: 0;
+        height: 100%;
+}
+a:hover {color:#990000;}
+.m1 {color:#ffee99; text-decoration:none;}
+a.m1 {color:#ffee99; text-decoration:none;}
+a:hover.m1 {color:#ffffff; text-decoration:underline;}
+a.bb {font-family: verdana, arial; text-align: top; font-size:10px; font-weight:bold; text-decoration:none; color:red;}
+
+.v {font-size:10pt; font-weight:bold; font-family:verdana, arial;}
+.ptxt {font-size:7pt; font-weight:bold; font-family:verdana, arial; color:#990000; text-align:center;}
+.adat {font-size:7pt; font-weight:bold; font-family:verdana, arial; color:#990000; text-align:right;}
+.auth_dat {font-size:7pt; font-weight:normal; font-family:verdana, arial; color:#996666; text-align:right;}
+.name_tmp {font-size:8pt; font-weight:bold; font-family:verdana, arial; color:#00546B;}
+.name {font-size:8pt; font-weight:bold; font-family:verdana, arial;}
+.name2 {font-size:8pt; font-weight:bold; font-family:verdana, arial; color:#666666;}
+.name_em {color:#00996B;;}
+.desc {font-size:8pt; font-family:verdana, arial;}
+.desc2 {font-size:9pt; font-family:verdana, arial;}
+table.desc2 td, table.desc2 th {font-size:9pt; font-family:verdana, arial; border: 1px solid #990000;}
+table.desc2 a {font-size:9pt; font-family:verdana, arial;}
+.price {font-weight:bold; color: #990000;}
+
+.book p
+{font-size:8pt; font-family:verdana, arial;}
+.book_title {margin-bottom:8px; font-size:10pt; font-family:verdana, arial;}
+.order {font-size:9pt; font-family:verdana, arial; font-weight: bold;}
+.inputText {font-size:8pt; font-family:verdana, arial;}
+.shopcat, .shopcat td
+	{font-size:9pt; font-family:verdana, arial; font-weight: bold;} 
+.shop {font-size:9pt; font-family:verdana, arial;} 
+.shop h1 {font-size:10pt;}
+.shop p, .shop td, .shop th {font-size:9pt;}
+
+.tableCart, .tableCart td, .tableCart th
+ {border: solid 1px #990000; font-size: 8pt;}
+.regTable th {text-align:left;}
+ 
+.tur_o {font-size:8pt; font-family:verdana, arial;}
+.tur_a {font-size:8pt; font-family:verdana, arial; color:#333333;}
+
+.rhead, .rhead td {
+    BACKGROUND-COLOR:#993333; color:#ffee99;
+    BORDER: #993333 1px solid; padding: 3px 8px 3px 8px;
+    font-size:8pt; font-family: verdana, arial; font-weight:bold;
+}
+.rhead a { color:#ffee99; text-decoration:none;
+}
+.rNewsItem {margin-bottom: 8px;}
+.short_info {font-size:9pt; font-family:verdana, arial; line-height : 16px;}
+.ir {
+  BACKGROUND-COLOR: #ffffff;
+  BORDER: #993333 1px solid;
+  text-align: top;
+  font-size:8pt;
+  font-family: verdana, arial;
+  padding-left:8px;
+  padding-right:8px;
+  padding-top:8px;
+  padding-bottom:8px;
+  line-height : 16px;
+}
+.ir2 {
+  BACKGROUND-COLOR: #ffffff;
+  text-align: top;
+  font-size:8pt;
+  font-family: verdana, arial;
+  padding-left:8px;
+  padding-right:8px;
+  padding-top:8px;
+  padding-bottom:8px;
+  line-height : 16px;
+}
+.main_text{
+  BACKGROUND-COLOR: #ffffff;
+  BORDER: #993333 1px solid;
+  text-align: top;
+  font-family: times, san-serif;
+  text-align:justify;
+  padding-left:15px;
+  padding-right:15px;
+  padding-top:10px;
+  padding-bottom:10px;
+}
+.main_text h3 { text-align:left; }
+.main_list{
+  BACKGROUND-COLOR: #ffffff;
+  BORDER: #993333 1px solid;
+  text-align: top;
+  font-family: times, san-serif;
+  text-align:justify;
+  padding-left:20px;
+  padding-right:15px;
+  padding-top:10px;
+  padding-bottom:10px;
+}
+.menu_act {
+  color:#990000;
+  font-weight:bold;
+}
+h4 {
+  font-size:8pt;
+  font-family: verdana, arial;
+  margin-bottom: 8px;
+  margin-top: 0px;
+}
+h5 {
+  font-size:9pt;
+  font-family: verdana, arial;
+  margin-bottom: 8px;
+  margin-top: 0px;
+}
+h4.right {margin-top: 8px;}
+img.pic { border-color:#00546B; border-width: 1; }
+hr {margin-top: 4px;}
+.bord {BORDER: #993333 1px solid; MARGIN-TOP: 2px; MARGIN-BOTTOM: 6px; BACKGROUND-COLOR: #ffffff}
+table.ad {BORDER: #993333 1px solid; MARGIN-TOP: 2px; MARGIN-BOTTOM: 4px;
+   BACKGROUND-COLOR: #ffffff;
+   font-size:8pt;
+   font-family: verdana, arial;
+   }
+
+.b1 {font-size:25pt; font-weight:bold; font-family: verdana, sans-serif, arial;}
+.b2 {font-size:11pt; font-weight:bold; font-family: sans-serif, arial;}
+.s1 {font-size:10pt; font-family: verdana, sans-serif, arial;}
+.s2 {font-size:8pt; font-family: verdana, sans-serif, arial;}
+
+.ots_block {margin-left:50px; font-family: verdana, arial, sans-serif; font-size:11px; color:#000066;}
+.ots_block2 {margin-left:50px; font-family: verdana, arial, sans-serif; font-size:11px; color:#cc3366;}
+.ots_1 {color:#aaaaaa; font weight:bold;}
+.blu2 {color:#000099;}
+
+.mm_name, .mm_price, .mm_merc {font-family: verdana, arial, sans-serif; font-size:11px;}

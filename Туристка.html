@@ -1,0 +1,503 @@
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="robots" content="index, follow">
+    <link href="files/bootstrap.min.css" rel="stylesheet">
+    <link href="files/style.css" rel="stylesheet">
+
+    <link href="files/dropdown.css" rel="stylesheet">
+    <link href="custom/activetour.css" rel="stylesheet">
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+
+    <script src="files/dropdown.js" defer></script>
+
+    <style type="text/css">.fancybox-margin {
+        margin-right: 0px;
+    }</style>
+</head>
+<body>
+
+<div class="form">
+    <div class="titles">
+        <div id="1" class="title_tab">Варианты размещения</div>
+        <div id="2" class="title_tab active">Активные туры</div>
+    </div>
+    <div class="tab tab1">
+        <form name="base" action="bf.php" method="get">
+            <input type="hidden" name="filter" value="1">
+            <div class="tab_content">
+                <div class="inputs">
+                    <div class="input"> <!--<div class="input choose_place">-->
+                        Расположение:<br>
+                        <select class="search_" name="pl">
+                            <option value="0">- все -</option>
+                            ");
+
+                            <option value="1">в низовьях Катуни</option>
+                            <option value="3">на озере Ая</option>
+                            <option value="5">у “Бирюзовой Катуни”</option>
+                            <option value="2">в районе Чемала</option>
+                            <option value="4">на Телецком озере</option>
+                            <option value="6">в районе Белокурихи</option>
+                            <option value="8">Усть-Сема - Семинский</option>
+                            <option value="10">за Семинским перевалом</option>
+                            <option value="9">в районе Усть-Коксы</option>
+                            <option value="11">Соленые озера Алтая</option>
+                            <option value="7">потаенные уголки Алтая</option>
+                            <option value="12">в Алтайском крае</option>
+                            <option value="999">= остальные =</option>
+                        </select>
+                    </div>
+                    <div class="input">
+                        Ищу:<br>
+                        <select class="search_">
+                            <option value="" class="item">Номер</option>
+                            <option value="" class="item">Отдельный Дом/коттедж</option>
+                        </select>
+                        <!--                            <input type="text" placeholder="выберите район..." value="">-->
+                    </div>
+                    <div class="input price">
+                        Цена, руб.<br>
+                        <input type="text" placeholder="от" value="">-
+                        <input type="text" placeholder="до" value="">
+                    </div>
+                    <div class="input date">
+                        Дата заселения:<br>
+                        <div class="inline">
+                            <input type="text" class="calendar" onfocus="this.select();lcs(this)"
+                                   onclick="event.cancelBubble=true;this.select();lcs(this)">
+                            <!--                                    <div class="icon"></div>-->
+                        </div>
+                    </div>
+                    <div class="clear_button main_button">
+                        <input class="button" type="reset" value="Сбросить">
+                    </div>
+                </div>
+                <div class="more_details">
+                    <table class="checkboxes">
+                        <tbody>
+                        <tr class="tr1">
+                            <td id="label1">
+                                <label class="checkbox _id1" onclick="Use_Checkbox(1)">
+                                    <i></i>дополнительное место
+                                </label>
+                                <input class="checkbox_main" id="id1" type="checkbox" name="i_dopm" value="1">
+                            </td>
+                            <td id="label4">
+                                <label class="checkbox _id4" onclick="Use_Checkbox(4)">
+                                    <i></i>холодильник
+                                </label>
+                                <input class="checkbox_main" id="id4" type="checkbox" name="i_hol" value="1">
+                            </td>
+                            <td id="label7">
+                                <label class="checkbox _id7" onclick="Use_Checkbox(7)">
+                                    <i></i>камин
+                                </label>
+                                <input class="checkbox_main" id="id7" type="checkbox" name="i_kamin" value="1">
+                            </td>
+                            <td id="label10">
+                                <label class="checkbox _id10" onclick="Use_Checkbox(10)">
+                                    <i></i> теннисный корт
+                                </label>
+                                <input class="checkbox_main" id="id10" type="checkbox" name="i_bt" value="1">
+                            </td>
+                            <td colspan="2" id="label13">
+                                <label class="checkbox _id13" onclick="Use_Checkbox(13)">
+                                    <i></i>принимают с домашними животными
+                                </label>
+                                <input class="checkbox_main" id="id13" type="checkbox" name="i_pets" value="1">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td id="label2">
+                                <label class="checkbox _id2" onclick="Use_Checkbox(2)">
+                                    <i></i>плита
+                                </label>
+                                <input class="checkbox_main" id="id2" type="checkbox" name="i_pli" value="1">
+                            </td>
+                            <td id="label5">
+                                <label class="checkbox _id5" onclick="Use_Checkbox(5)">
+                                    <i></i> ТВ
+                                </label>
+                                <input class="checkbox_main" id="id5" type="checkbox" name="i_tv" value="1">
+                            </td>
+                            <td id="label8">
+                                <label class="checkbox _id8" onclick="Use_Checkbox(8)">
+                                    <i></i>бильярд
+                                </label>
+                                <input class="checkbox_main" id="id8" type="checkbox" name="i_bill" value="1">
+                            </td>
+                            <td id="label11">
+                                <label class="checkbox _id11" onclick="Use_Checkbox(11)">
+                                    <i></i> детская площадка
+                                </label>
+                                <input class="checkbox_main" id="id11" type="checkbox" name="i_det_plo" value="1">
+                            </td>
+                            <td id="label14">
+                                <label class="checkbox _id14" onclick="Use_Checkbox(14)">
+                                    <i></i>есть места под палатки
+                                </label>
+                                <input class="checkbox_main" id="id14" type="checkbox" name="i_palatka" value="1">
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td id="label3">
+                                <label class="checkbox _id3" onclick="Use_Checkbox(3)">
+                                    <i></i>посуда
+                                </label>
+                                <input class="checkbox_main" id="id3" type="checkbox" name="i_pos" value="1">
+                            </td>
+                            <td id="label6">
+                                <label class="checkbox _id6" onclick="Use_Checkbox(6)">
+                                    <i></i> интернет
+                                </label>
+                                <input class="checkbox_main" id="id6" type="checkbox" name="i_internet" value="1">
+                            </td>
+                            <td id="label9">
+                                <label class="checkbox _id9" onclick="Use_Checkbox(9)">
+                                    <i></i> настольный теннис
+                                </label>
+                                <input class="checkbox_main" id="id9" type="checkbox" name="i_nt" value="1">
+                            </td>
+                            <td id="label12">
+                                <label class="checkbox _id12" onclick="Use_Checkbox(12)">
+                                    <i></i> спортивная площадка
+                                </label>
+                                <input class="checkbox_main" id="id12" type="checkbox" name="i_sport_plo" value="1">
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    <table class="radios">
+                        <tbody>
+                        <tr class="wc">
+                            <td>
+                                WC:
+                            </td>
+                            <td id="label1">
+                                <div class="inline">
+                                    <label id="radio1" class="radio active _id1" onclick="Use_Radio(1)">
+                                        <i></i>
+                                    </label>
+                                    <input name="i_wc" type="radio" class="radio_main" value="0" checked=""> не
+                                    указано
+                                </div>
+                            </td>
+                            <td id="label2">
+                                <div class="inline">
+                                    <label id="radio2" class="radio _id2" onclick="Use_Radio(2)">
+                                        <i></i>
+                                    </label>
+                                    <input name="i_wc" type="radio" class="radio_main" value="1"> на территории
+                                </div>
+                            </td>
+                            <td id="label3">
+                                <div class="inline">
+                                    <label id="radio3" class="radio _id3" onclick="Use_Radio(3)">
+                                        <i></i>
+                                    </label>
+                                    <input name="i_wc" type="radio" class="radio_main" value="2"> на этаже
+                                </div>
+                            </td>
+                            <td id="label4">
+                                <div class="inline">
+                                    <label id="radio4" class="radio _id4" onclick="Use_Radio(4)">
+                                        <i></i>
+                                    </label>
+                                    <input name="i_wc" type="radio" class="radio_main" value="3"> в номере
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="shower">
+                            <td>
+                                Душ:
+                            </td>
+                            <td id="label5">
+                                <div class="inline">
+                                    <label class="radio active _id5" onclick="Use_Radio(5)">
+                                        <i></i>
+                                    </label>
+                                    <input name="i_dush" type="radio" class="radio_main" value="0" checked="">
+                                    не
+                                    указано
+                                </div>
+                            </td>
+                            <td id="label6">
+                                <div class="inline">
+                                    <label class="radio _id6" onclick="Use_Radio(6)">
+                                        <i></i>
+                                    </label>
+                                    <input name="i_dush" type="radio" class="radio_main" value="1"> на
+                                    территории
+                                </div>
+                            </td>
+                            <td id="label7">
+                                <div class="inline">
+                                    <label class="radio _id7" onclick="Use_Radio(7)">
+                                        <i></i>
+                                    </label>
+                                    <input name="i_dush" type="radio" class="radio_main" value="2"> на этаже
+                                </div>
+                            </td>
+                            <td id="label8">
+                                <div class="inline">
+                                    <label class="radio _id8" onclick="Use_Radio(8)">
+                                        <i></i>
+                                    </label>
+                                    <input name="i_dush" type="radio" class="radio_main" value="3"> в номере
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="pool">
+                            <td>
+                                Бассейн:
+                            </td>
+                            <td id="label9">
+                                <div class="inline">
+                                    <label class="radio active _id9" onclick="Use_Radio(9)">
+                                        <i></i>
+                                    </label>
+                                    <input name="i_bas" type="radio" class="radio_main" value="0" checked=""> не
+                                    указано
+                                </div>
+                            </td>
+                            <td id="label10">
+                                <div class="inline">
+                                    <label class="radio _id10" onclick="Use_Radio(10)">
+                                        <i></i>
+                                    </label>
+                                    <input name="i_bas" type="radio" class="radio_main" value="1"> летний
+                                </div>
+                            </td>
+                            <td id="label11">
+                                <div class="inline">
+                                    <label class="radio _id11" onclick="Use_Radio(11)">
+                                        <i></i>
+                                    </label>
+                                    <input name="i_bas" type="radio" class="radio_main" value="4">
+                                    круглогодичный
+                                </div>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    <div class="add">
+                        <div class="col-xs-6">
+                            Конференц зал на:
+                            <input type="text" placeholder="" value="" name="z_t">
+                            мест
+                        </div>
+                        <div class="col-xs-6">
+                            Зал для тренингов:
+                            <input type="text" placeholder="" value="" name="z_c">
+                            м<sup>2</sup>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="main_button">
+                    <input type="submit" value="Найти"><br>
+                    <div class="clear_button main_button bottom_pos">
+                        <input class="button" type="reset" value="Сбросить">
+                    </div>
+                </div>
+
+            </div>
+        </form>
+
+    </div>
+    <div class="tab tab2 active">
+        <div class="tab_content" style="display: flex; flex-wrap: wrap">
+            
+            <div style="max-width: 650px; margin-bottom: 50px;">
+
+                    <!-- Расположение:<br>-->
+
+
+                    <div class="input" style="margin-left: 30px">
+                        <div>Продолжительность (дней):</div>
+                        <div style="display: flex; margin-top: 14px;">
+                            <input size="4" name="ndays_0" type="text" placeholder="от" value="">
+                            <input size="4" name="ndays_1" type="text" placeholder="до" value="">
+                        </div>
+                    </div>
+
+
+                    <div class="input price" style="margin-left: 30px">
+                        <div>Туристов в группе:</div>
+                        <div style="display: flex; margin-top: 14px; ">
+                            <input size="4" name="man_min" type="text" placeholder="от" value="">
+                            <input size="4" name="man_max" type="text" placeholder="до" value="">
+                        </div>
+                    </div>
+
+
+                    <div class="input price" style="margin-left: 30px">
+                        <div>Цена, руб.</div>
+                        <div style="display: flex; margin-top: 14px; ">
+                            <input name="cost_0" type="text" placeholder="от" value="">
+                            <input name="cost_1" type="text" placeholder="до" value="">
+                        </div>
+                    </div>
+
+
+                    <div class="input date" style="margin-left: 30px">
+                        <div>Дата заезда:</div>
+                        <div style="display: flex; margin-top: 14px;">
+                            <input name="dat_0" type="text" class="calendar" onfocus="this.select();lcs(this)"
+                                   onclick="event.cancelBubble=true;this.select();lcs(this)">
+                            <div class="icon"></div>
+                        </div>
+
+
+                        <!--
+                                                    <div class="inline">
+                                                        <form class="date_calendar" action="">
+                                                            <input name="dat_1" type="text" class="calendar" onfocus="this.select();lcs(this)"
+                                                                   onclick="event.cancelBubble=true;this.select();lcs(this)">
+                                                            <div class="icon"></div>
+                                                        </form>
+                                                    </div>
+                        -->
+
+            </div>
+            </div> <!--inputs был класс-->
+            
+            <div style="display: flex;">
+                <div class="input-container">
+                    <div>Выберите интересующие вас типы туров:</div>
+
+                    <dl class="dropdown">
+
+                        <dt>
+                            <a href="#">
+                                <span class="hida">Select</span>
+                                <p class="multiSel"></p>
+                            </a>
+                        </dt>
+
+                        <dd>
+                            <div class="mutliSelect">
+                                <ul>
+                                    <li>
+                                        <input type="checkbox" value="Зимние"
+                                               style="position: static; left: auto; margin: 0;"/>Зимние туры
+                                    </li>
+
+                                    <li>
+                                        <input type="checkbox" value="Конные"
+                                               style="position: static; left: auto; margin: 0;"/>Конные
+                                    </li>
+
+                                    <li>
+                                        <input type="checkbox" value="Водные"
+                                               style="position: static; left: auto; margin: 0;"/>Водные
+                                    </li>
+
+                                    <li>
+                                        <input type="checkbox" value="Велосипедные"
+                                               style="position: static; left: auto; margin: 0;"/>Велосипедные
+                                    </li>
+
+                                    <li>
+                                        <input type="checkbox" value="Пешеходные"
+                                               style="position: static; left: auto; margin: 0;"/>Пешеходные
+                                    </li>
+
+                                    <li>
+                                        <input type="checkbox" value="Конно-водные"
+                                               style="position: static; left: auto; margin: 0;"/>Конно-водные
+                                    </li>
+
+                                    <li>
+                                        <input type="checkbox" value="Пеше-водные"
+                                               style="position: static; left: auto; margin: 0;"/>Пеше-водные
+                                    </li>
+
+                                    <li>
+                                        <input type="checkbox" value="Вело-водные"
+                                               style="position: static; left: auto; margin: 0;"/>Вело-водные
+                                    </li>
+
+                                    <li>
+                                        <input type="checkbox" value="Комбинированные"
+                                               style="position: static; left: auto; margin: 0;"/>Комбинированные
+                                    </li>
+
+                                    <li>
+                                        <input type="checkbox" value="Автомобильные"
+                                               style="position: static; left: auto; margin: 0;"/>Автомобильные
+                                    </li>
+
+                                    <li>
+                                        <input type="checkbox" value="Восхождения"
+                                               style="position: static; left: auto; margin: 0;"/>Восхождения
+                                    </li>
+
+                                    <li>
+                                        <input type="checkbox" value="На квадроциклах"
+                                               style="position: static; left: auto; margin: 0;"/>На квадроциклах
+                                    </li>
+
+                                    <li>
+                                        <input type="checkbox" value="Фототуры"
+                                               style="position: static; left: auto; margin: 0;"/>Фототуры
+                                    </li>
+
+                                    <li>
+                                        <input type="checkbox" value="Оздоровительные"
+                                               style="position: static; left: auto; margin: 0;"/>Оздоровительные
+                                    </li>
+
+                                    <li>
+                                        <input type="checkbox" value="Вертолетные"
+                                               style="position: static; left: auto; margin: 0;"/>Вертолетные
+                                    </li>
+
+                                    <li>
+                                        <input type="checkbox" value="Детские программы"
+                                               style="position: static; left: auto; margin: 0;"/>Детские программы
+                                    </li>
+
+                                    <li>
+                                        <input type="checkbox" value="Cеминары и тренинги"
+                                               style="position: static; left: auto; margin: 0;"/>Cеминары и тренинги
+                                    </li>
+
+                                    <li>
+                                        <input type="checkbox" value="Охота и рыбалка"
+                                               style="position: static; left: auto; margin: 0;"/>Охота и рыбалка
+                                    </li>
+
+                                </ul>
+                            </div>
+                        </dd>
+
+                        <!--
+                                <button>Filter</button>
+                                -->
+                    </dl>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="button_more">
+        <div class="button">
+            <a class="more" href="#more">Подробный поиск</a>
+            <a class="less" href="#less">Скрыть поиск</a>
+        </div>
+    </div>
+</div>
+
+
+<input type="checkbox" value="Apple" style="position: static; left: auto; margin: 0;"/>
+
+
+</body>
+</html>
